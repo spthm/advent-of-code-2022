@@ -24,6 +24,7 @@ impl FromStr for Assignment {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let (l, r) = s.split_once('-').unwrap();
+
         let start = l.parse::<u32>()?;
         let end = r.parse::<u32>()?;
         Ok(Self { start, end })

@@ -2,7 +2,7 @@ use aoc_runner_derive::{aoc, aoc_generator};
 
 #[aoc_generator(day3)]
 pub fn parse(input: &str) -> Vec<String> {
-    input.split('\n').map(|line| line.to_string()).collect()
+    input.lines().map(|line| line.to_string()).collect()
 }
 
 #[aoc(day3, part1)]

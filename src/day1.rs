@@ -4,7 +4,7 @@ use aoc_runner_derive::{aoc, aoc_generator};
 pub fn parse(input: &str) -> Vec<u32> {
     input
         .split("\n\n")
-        .map(|kcal| kcal.split('\n').map(|s| s.parse::<u32>().unwrap()).sum())
+        .map(|kcal| kcal.lines().map(|s| s.parse::<u32>().unwrap()).sum())
         .collect()
 }
 
